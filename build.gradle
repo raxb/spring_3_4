@@ -21,6 +21,8 @@ dependencies {
 	implementation 'org.springframework.boot:spring-boot-starter-web'
 	implementation 'io.projectreactor.netty:reactor-netty:1.2.1'
 	runtimeOnly "io.netty:netty-resolver-dns-native-macos:4.1.72.Final:osx-aarch_64"
+	implementation 'org.hibernate.validator:hibernate-validator:8.0.2.Final'
+	compileOnly 'org.projectlombok:lombok:1.18.36'
 
 	developmentOnly 'org.springframework.boot:spring-boot-devtools'
 	testImplementation 'org.springframework.boot:spring-boot-starter-test'

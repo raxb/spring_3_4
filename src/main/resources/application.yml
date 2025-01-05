@@ -2,3 +2,12 @@ spring:
   application:
     name: spring_3_4
 
+# informational all the fields are required and validated - try removing one and face the consequences
+info:
+  name: Vivek
+  email: vivek@spring.com
+  address:
+    line1: 255 Burrard
+    city: Vancouver
+    state: British Columbia
+    country: Canada
