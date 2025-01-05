@@ -1,6 +1,8 @@
 spring:
   application:
     name: spring_3_4
+  lifecycle:
+    timeout-per-shutdown-phase: 20s # https://docs.spring.io/spring-boot/reference/web/graceful-shutdown.html
 
 # informational all the fields are required and validated - try removing one and face the consequences
 info:
