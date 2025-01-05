@@ -24,6 +24,8 @@ dependencies {
 	implementation 'org.hibernate.validator:hibernate-validator:8.0.2.Final'
 	compileOnly 'org.projectlombok:lombok:1.18.36'
 
+	annotationProcessor 'org.projectlombok:lombok:1.18.36' // required for reading the lombok generated code Getter, Setter, ToString
+
 	developmentOnly 'org.springframework.boot:spring-boot-devtools'
 	testImplementation 'org.springframework.boot:spring-boot-starter-test'
 	testRuntimeOnly 'org.junit.platform:junit-platform-launcher'
@@ -31,4 +33,11 @@ dependencies {
 
 tasks.named('test') {
 	useJUnitPlatform()
+}
+
+// Good read - https://tomgregory.com/gradle/annotation-processors-in-gradle-with-the-annotationprocessor-dependency-configuration/
+tasks.withType(JavaCompile).configureEach {
+	doFirst {
+		println "AnnotationProcessorPath for $name is ${options.getAnnotationProcessorPath().getFiles()}"
+	}
 }
