@@ -1,0 +1,5 @@
+spring:
+  profile:
+    active: test
+  testcontainers:
+    dynamic-property-registry-injection: warn #log a warning while allowing the use of an injected DynamicPropertyRegistry
