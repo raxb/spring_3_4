@@ -1,5 +1,6 @@
 package com.lancedom.spring_3_4.service;
 
+import com.lancedom.spring_3_4.annotations.MyPlaybook;
 import com.lancedom.spring_3_4.config.InformationalProperties;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.client.JdkClientHttpRequestFactory;
@@ -7,6 +8,7 @@ import org.springframework.stereotype.Service;
 import org.springframework.web.client.RestClient;
 
 @Service
+@MyPlaybook
 public class PlaygroundService {
 
     private final RestClient restClient;
